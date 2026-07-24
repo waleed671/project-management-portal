@@ -1,0 +1,148 @@
+.container {
+    animation: fadeIn 0.4s ease-out;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: var(--text-main);
+}
+
+.header p {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.list {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 8px;
+}
+
+.invoiceRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.2s;
+}
+
+.invoiceRow:last-child {
+    border-bottom: none;
+}
+
+.invoiceRow:hover {
+    background: var(--bg-hover);
+}
+
+.invoiceInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.id {
+    font-family: monospace;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.desc {
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.date {
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.invoiceActions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.amount {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-right: 10px;
+}
+
+.payBtn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.iconBtn {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 8px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: flex;
+}
+
+.iconBtn:hover {
+    background: var(--bg-hover);
+    color: var(--text-main);
+}
+
+/* Payment Modal */
+.paymentModal {
+    padding: 10px 0;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.bigAmount {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.cardPreview {
+    background: var(--bg-hover);
+    padding: 16px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid var(--border);
+}
+
+.cardIcon {
+    width: 40px;
+    height: 40px;
+    background: var(--bg-card);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+}
+
+.cardSub {
+    font-size: 12px;
+    color: var(--text-muted);
+}

@@ -1,0 +1,133 @@
+.container {
+    height: calc(100vh - 120px);
+    animation: fadeIn 0.4s ease-out;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: var(--text-main);
+}
+
+.board {
+    display: flex;
+    gap: 24px;
+    height: 100%;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.column {
+    flex: 1;
+    min-width: 280px;
+    background: var(--bg-hover);
+    border-radius: var(--radius-md);
+    padding: 16px;
+    border: 1px solid var(--border);
+}
+
+.columnHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.columnHeader h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-muted);
+    flex: 1;
+}
+
+.statusDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.statusDot[data-status="To Do"] {
+    background: var(--text-muted);
+}
+
+.statusDot[data-status="In Progress"] {
+    background: var(--primary);
+}
+
+.statusDot[data-status="Done"] {
+    background: var(--success);
+}
+
+.count {
+    background: var(--bg-card);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.taskList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.taskCard {
+    background: var(--bg-card);
+    padding: 16px;
+    border-radius: var(--radius-sm);
+    border: 1px solid transparent;
+    cursor: grab;
+    transition: all 0.2s;
+}
+
+.taskCard:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.taskCard h4 {
+    font-size: 14px;
+    color: var(--text-main);
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.taskFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.priority {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.priority[data-priority="High"] {
+    background: rgba(248, 81, 73, 0.2);
+    color: #f85149;
+}
+
+.priority[data-priority="Medium"] {
+    background: rgba(210, 153, 34, 0.2);
+    color: #d29922;
+}
+
+.priority[data-priority="Low"] {
+    background: rgba(46, 160, 67, 0.2);
+    color: #3fb950;
+}
+
+.taskIcon {
+    color: var(--text-muted);
+}

@@ -1,0 +1,143 @@
+/* ... existing styles ... */
+
+.container {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h3 {
+    font-size: 18px;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.viewAll {
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    text-align: left;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 13px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.table td {
+    padding: 16px 0;
+    color: var(--text-dim);
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.projectName {
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.status {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.inprogress {
+    color: #3b82f6;
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.review {
+    color: #d29922;
+    background: rgba(210, 153, 34, 0.1);
+}
+
+.completed {
+    color: #2ea043;
+    background: rgba(46, 160, 67, 0.1);
+}
+
+.pending {
+    color: #8b949e;
+    background: rgba(139, 148, 158, 0.1);
+}
+
+.actionCell {
+    position: relative;
+}
+
+.actionBtn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.actionBtn:hover {
+    background: var(--bg-hover);
+    color: var(--text-main);
+}
+
+.dropdown {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    min-width: 120px;
+    overflow: hidden;
+}
+
+.dropdownItem {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 8px 12px;
+    font-size: 13px;
+    color: var(--text-main);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdownItem:hover {
+    background: var(--bg-hover);
+}
+
+.deleteItem {
+    color: #ff4d4f;
+}
+
+.deleteItem:hover {
+    background: rgba(255, 77, 79, 0.1);
+}

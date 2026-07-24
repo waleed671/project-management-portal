@@ -1,0 +1,74 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  password  String
+  role      String   // 'admin', 'staff', 'client'
+  createdAt DateTime @default(now())
+  
+  projects  Project[]
+  tasks     Task[]
+  invoices  Invoice[]
+  notifications Notification[]
+  
+  emailAlerts    Boolean  @default(true)
+  projectUpdates Boolean  @default(true)
+}
+
+model Project {
+  id          Int      @id @default(autoincrement())
+  title       String
+  clientName  String
+  status      String   // 'In Progress', 'Completed', 'Pending'
+  deadline    DateTime
+  progress    Int      @default(0)
+  
+  userId      Int?     // Assigned Staff ID
+  user        User?    @relation(fields: [userId], references: [id])
+  
+  createdAt   DateTime @default(now())
+}
+
+model Task {
+  id        Int      @id @default(autoincrement())
+  title     String
+  status    String   // 'To Do', 'In Progress', 'Done'
+  priority  String   // 'High', 'Medium', 'Low'
+  
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+model Invoice {
+  id          String   @id // e.g. 'INV-001'
+  amount      Float
+  status      String   // 'paid', 'pending'
+  description String
+  date        DateTime
+  
+  userId      Int      // Client ID
+  user        User     @relation(fields: [userId], references: [id])
+}
+
+model Notification {
+  id        Int      @id @default(autoincrement())
+  text      String
+  type      String   // 'info', 'warning', 'success'
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+  
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id])
+}

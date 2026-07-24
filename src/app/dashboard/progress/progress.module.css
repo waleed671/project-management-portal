@@ -1,0 +1,160 @@
+.container {
+    animation: fadeIn 0.4s ease-out;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: var(--text-main);
+}
+
+.header p {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.statsRow {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.statCard {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+}
+
+.statCard h3 {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.bigNumber {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.bigText {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 4px;
+}
+
+.subText {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.bar {
+    height: 8px;
+    background: var(--bg-hover);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background: var(--primary);
+    border-radius: 4px;
+}
+
+/* Timeline */
+.timeline {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 32px;
+}
+
+.step {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    padding-bottom: 32px;
+}
+
+.step:last-child {
+    padding-bottom: 0;
+}
+
+.icon {
+    position: relative;
+    z-index: 2;
+    background: var(--bg-card);
+}
+
+.line {
+    position: absolute;
+    left: 10px;
+    top: 24px;
+    bottom: 0;
+    width: 1px;
+    background: var(--border);
+    z-index: 1;
+}
+
+.stepContent {
+    flex: 1;
+}
+
+.stepHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.stepHeader h4 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.stepDate {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-family: monospace;
+}
+
+.step p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* Status variants */
+.completed .icon {
+    color: var(--success);
+}
+
+.completed h4 {
+    color: var(--text-main);
+}
+
+.completed .line {
+    background: var(--success);
+}
+
+.current .icon {
+    color: var(--primary);
+}
+
+.current h4 {
+    color: var(--primary);
+}
+
+.upcoming .icon {
+    color: var(--text-muted);
+}
+
+.upcoming h4 {
+    color: var(--text-muted);
+}
